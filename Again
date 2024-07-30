@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ceb6db;
+		}
+
+		.border {
+			border: 3px solid #000000;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #bf85de;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="Home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="School" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> School</a>
+		<a id="Work" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Work</a>
+		<a id="Budget" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-1-wave"></i> Budget</a>
+		<a id="Hobbies" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i> Hobbies</a>
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'Home')
+				window.open("https://www.notion.so/Home-Base-30b1829969f643edbc2d5c0ca44ee008", '_blank').focus();
+			else if (id == 'School')
+				window.open("https://www.notion.so/Midd-4b05466e35bb4c0a8ea03ba9597ee95a", '_blank').focus();
+			else if (id == 'Work')
+				window.open("https://www.notion.so/Work-ff5d6b8acfce4f27a42287d42ed785eb", '_blank').focus();
+			else if (id == 'Budget')
+				window.open("https://www.notion.so/Budget-cd072483dad74518a2a9265a1e346304", '_blank').focus();
+			else if (id == 'Hobbies')
+				window.open("https://www.notion.so/Hobbies-d0addc66b1d24efcb3af6775cd534f5d", '_blank').focus();
+		}
+	</script>
+
+
+</body>
+
+</html>
